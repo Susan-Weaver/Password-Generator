@@ -1,28 +1,30 @@
 // Assignment code here
 
-function selectPassCriteriaLength (lengthChoice) {
-  var lengthChoice = prompt("How many charactors would you like the password to be? Minimum of 8, Maximum of 128");
-  console.log(lengthChoice);
-  //check it's between 8 and 128
-}
+// Request input from the user and assign to variables.
+var lengthChoice = prompt("How many charactors would you like the password to be (min 8, max 128)?");
+   console.log(lengthChoice)
+   //check it's between 8 and 128 
+   while (lengthChoice < 8 || lengthChoice > 128) {
+      var lengthChoice = prompt("OPPS! please choose a number between 8 and 128");
+      break;
+      };
+      console.log(lengthChoice);
 
-function selectPassCriteriaLowerCase (lowerCase) {
   var lowerCase = prompt("Do you want to include LOWER case letters? YES or NO");
   console.log(lowerCase);
-}
+  // check yes no
 
-function selectPassCriteriaUpperCase (upperCase) {
-  var upperCase = prompt("Do you want to include UPPER case letters?");
+  var upperCase = prompt("Do you want to include UPPER case letters? YES or NO");
   console.log(upperCase);
   //check yes no
-}
 
-
-function selectPassCriteriaNumberSpecChar (numSpecChar) {
-  var numSpecChar = prompt("Do you want to include numeric and/or special charactors case letters?");
+  var numSpecChar = prompt("Do you want to include numeric and/or special charactors case letters? YES or NO");
   console.log(numSpecChar);
   //check yes no
-}
+
+// Check responses from the user to see if they are valid
+
+
 
 
 
@@ -43,11 +45,11 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 
-var Start = function () {
-    selectPassCriteriaLength ();
-    selectPassCriteriaLowerCase ();
-    selectPassCriteriaUpperCase ();
-    selectPassCriteriaNumberSpecChar ();
-}
+//var Start = function () {
+//lengthChoice ();
+//lowerCase ();
+//upperCase ();
+//numSpecChar ();
+//}
 
-Start ();
+//Start ();
