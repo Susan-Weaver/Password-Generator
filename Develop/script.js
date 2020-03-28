@@ -58,7 +58,11 @@ var specCharChoice = prompt("To include SPECIAL CHARACTORS, type YES or NO");
       // write to user choice to the console.log for easy reference
       console.log (specCharChoice + " special charactors")
 
-
+//Check that there is a yes entry for some set of charactors or else it would be an empty password.
+if (l === "no" && u === "no" && n === "no" && s === "no") {
+  prompt("All charactor types were excluded from the password - with this criteria the password generated would be blank")
+}
+      
 
 
 
