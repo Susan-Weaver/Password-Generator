@@ -85,18 +85,18 @@ var generatePassword = function () {
   }
 
   // note all the values that can be used in the password
-  console.log (values)
+  console.log ("optional values:  " + values)
 
   let password = "";
 
   //create for loop to choose password characters
   for(var i = 0; i <= lengthChoice; i++) {
     password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
-  }
+   }
 
-console.log (password)
+console.log ("generated password:  " + password)
+window.alert ("Your Password Is:  " + password)
 }
-
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -105,10 +105,9 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
-
 }
+writePassword();
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
